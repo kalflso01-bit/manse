@@ -1,0 +1,44 @@
+{
+  "id": "/",
+  "name": "운세명리 만세력",
+  "short_name": "운세명리",
+  "description": "태어난 순간의 하늘을 정확하게 읽는 무료 만세력. 사주 원국, 오행·십성, 대운·연운, 오늘의 운세까지.",
+  "start_url": "/?src=app",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFDF8",
+  "theme_color": "#0F1C4D",
+  "lang": "ko",
+  "dir": "ltr",
+  "categories": [
+    "lifestyle",
+    "entertainment"
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
