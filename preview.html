@@ -455,6 +455,8 @@ details[open] .sc-h:after{transform:rotate(180deg)}
 .ss-table .sinsal .colhead{margin-top:12px}
 .cta-consult{display:block;margin-top:22px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:18px;padding:17px 20px;font-size:15.5px;font-weight:700;text-decoration:none;box-shadow:0 8px 22px rgba(15,28,77,.2)}
 .cta-consult small{display:block;font-size:13px;color:var(--gold);margin-top:4px;font-weight:700}
+.room-shop{margin-top:36px}
+.room-shop h3{font-size:18px}
 .room-nav{margin-top:40px;border-top:1px solid var(--line);padding-top:22px}
 .rn-t{font-size:14px;font-weight:800;color:var(--sub);margin-bottom:10px}
 .rn-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}
@@ -1472,8 +1474,9 @@ function roomsBlock(R){
     <div class="room-grid">${ROOMS.map((r, i) => `<button class="room ${i < 2 ? 'hot' : ''}" data-act="room" data-k="${r.k}"><i>${r.g}</i><b>${r.t}</b><small>${roomTeaser(R, r.k)}</small></button>`).join('')}</div></section>`;
 }
 function consultCta(text){
-  if (SHOP.mode !== 'products' || !SHOP.consult) return '';
-  return extLink(SHOP.consult, `${text}<small>${SHOP.name} 전통사주 상담 바로가기 ↗</small>`, 'cta-consult');
+  if (SHOP.mode === 'off') return '';
+  if (SHOP.mode === 'simple') return `<section class="shop room-shop">${extLink(SHOP.home, `<span>${SHOP.name} 바로가기</span><small>koreaunse.com ↗</small>`)}</section>`;
+  return `<section class="shop room-shop"><h3>${text}</h3><p class="shop-sub">${SHOP.name}에서 전문 사주 풀이를 받아보세요.</p>${extLink(SHOP.home, `<span>${SHOP.name} 전체 상품 보기</span><small>koreaunse.com ↗</small>`, 'all')}${SHOP.consult ? extLink(SHOP.consult, `<span>${SHOP.name} 전통사주 상담 바로가기</span><small>peakon.me ↗</small>`, 'all') : ''}</section>`;
 }
 function roomNav(cur){
   return `<div class="room-nav"><div class="rn-t">다른 방 보기</div><div class="rn-list">${ROOMS.filter(r => r.k !== cur).map(r => `<button data-act="room" data-k="${r.k}"><i>${r.g}</i>${r.t}</button>`).join('')}</div>
