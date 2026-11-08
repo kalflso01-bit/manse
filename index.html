@@ -337,6 +337,28 @@ footer b:before{content:"✦ ";color:var(--gold)}
 .dae-info .yr{display:block;color:var(--gold-d);font-weight:800;font-size:13px}
 .dae-info b{color:var(--navy)}
 
+/* 행운·건강 복줄 */
+.charm-cta{display:flex;align-items:center;gap:14px;width:100%;margin-top:14px;padding:16px 18px;border-radius:18px;text-align:left;background:linear-gradient(135deg,#FFF6E2 0%,#FBEBC8 100%);border:1.5px solid var(--gold);box-shadow:0 8px 22px rgba(201,164,92,.22);position:relative;overflow:hidden}
+.charm-cta:active{transform:scale(.99)}
+.charm-cta i{flex:none;width:46px;height:46px;border-radius:14px;background:#C8382E;color:#FFE7A8;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:24px;font-weight:800;box-shadow:inset 0 0 0 2px rgba(255,231,168,.6)}
+.charm-cta span{flex:1;min-width:0}
+.charm-cta b{display:block;font-size:17px;font-weight:800;color:var(--navy);letter-spacing:-.3px}
+.charm-cta small{display:block;font-size:13px;color:var(--gold-d);font-weight:600;margin-top:3px}
+.charm-cta em{font-style:normal;font-size:28px;color:var(--gold-d);font-weight:700;line-height:1}
+.ch-t{font-size:28px;font-weight:800;letter-spacing:-.6px;color:var(--navy);margin:14px 0 8px}
+.ch-warn{background:#FFF4F2;border:1px solid #F6C9C3;color:#9A3B33;border-radius:14px;padding:12px 16px;font-size:14px;line-height:1.65;margin-bottom:16px}
+.ch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.ch-empty{grid-column:1/-1;text-align:center;color:var(--sub);background:var(--card);border:1px dashed var(--gold2);border-radius:18px;padding:40px 16px;font-size:15px;line-height:1.7}
+.ch-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:10px 10px 12px;box-shadow:var(--sh);display:flex;flex-direction:column;min-width:0}
+.ch-img{display:block;position:relative;border-radius:12px;overflow:hidden;background:var(--soft);aspect-ratio:3/4}
+.ch-img img{width:100%;height:100%;object-fit:cover;display:block}
+.ch-img span{position:absolute;left:8px;top:8px;font-size:11.5px;font-weight:800;background:var(--navy);color:var(--gold);border-radius:10px;padding:2px 8px}
+.ch-card b{display:block;font-size:15px;font-weight:800;color:var(--navy);margin-top:10px;padding:0 2px}
+.ch-card small{display:block;font-size:12.5px;color:var(--sub);line-height:1.5;margin-top:3px;padding:0 2px;flex:1}
+.ch-dl{display:flex;align-items:center;justify-content:center;gap:6px;height:42px;margin-top:10px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;font-size:14.5px;font-weight:700;text-decoration:none}
+.ch-dl:before{content:"↓";color:var(--gold);font-weight:800}
+.ch-full{width:100%;border-radius:14px;display:block;background:var(--soft)}
+
 /* 모달·메뉴 */
 .dim{position:fixed;inset:0;background:rgba(15,28,77,.35);backdrop-filter:blur(2px);z-index:50;display:flex;align-items:center;justify-content:center;padding:20px;animation:fi .15s}
 @keyframes fi{from{opacity:0}}
@@ -433,6 +455,7 @@ const SHOP = {
   mode: IS_APP ? 'simple' : 'products',
   name: '운세명리',
   home: 'https://www.koreaunse.com/',
+  consult: 'https://peakon.me/@sajuunse',   // 전통사주 상담 (웹 버전에서만 표시)
   items: [
     { title: '연화아씨 연애비책', tag: '연애', url: 'https://www.koreaunse.com/f/cmuxourei000106pi70d1bsg5' },
     { title: '연 아씨 궁합사주', tag: '궁합', url: 'https://www.koreaunse.com/f/cmuj73sgv000604l1qmch07k9' },
@@ -445,7 +468,7 @@ const extLink = (url, inner, cls) => `<a class="${cls||''}" href="${url}" target
 function shopBlock(){
   if (SHOP.mode === 'off') return '';
   if (SHOP.mode === 'simple') return `<section class="shop pad">${extLink(SHOP.home, `<span>${SHOP.name} 바로가기</span><small>koreaunse.com ↗</small>`)}</section>`;
-  return `<section class="shop pad"><h3>더 깊은 풀이가 궁금하다면</h3><p class="shop-sub">${SHOP.name}에서 전문 사주 풀이를 받아보세요.</p>${SHOP.items.map(it => extLink(it.url, `<span>${it.title}</span><small>${it.tag} ↗</small>`)).join('')}${extLink(SHOP.home, `<span>${SHOP.name} 전체 상품 보기</span><small>koreaunse.com ↗</small>`, 'all')}</section>`;
+  return `<section class="shop pad"><h3>더 깊은 풀이가 궁금하다면</h3><p class="shop-sub">${SHOP.name}에서 전문 사주 풀이를 받아보세요.</p>${SHOP.items.map(it => extLink(it.url, `<span>${it.title}</span><small>${it.tag} ↗</small>`)).join('')}${extLink(SHOP.home, `<span>${SHOP.name} 전체 상품 보기</span><small>koreaunse.com ↗</small>`, 'all')}${extLink(SHOP.consult, `<span>${SHOP.name} 전통사주 상담 바로가기</span><small>peakon.me ↗</small>`, 'all')}</section>`;
 }
 document.getElementById('logoMark').src = LOGO_MARK;
 
@@ -741,6 +764,7 @@ function render(){
   if (route === '/form') return renderForm();
   if (route === '/confirm' && state.input) return renderConfirm();
   if (route === '/result' && state.input) return renderResult();
+  if (route === '/charms') return renderCharms();
   renderLanding();
 }
 
@@ -757,8 +781,44 @@ function renderLanding(){
       <div><i style="background:var(--waterL);color:var(--water)">運</i><b>운의 흐름</b><span>대운·연운·월운<br>일진 달력</span></div>
     </div>
   </section>
+  <section class="pad" id="charm-cta" style="display:none"><button class="charm-cta" data-act="nav" data-to="/charms"><i>福</i><span><b>행운·건강 복줄 받아가기</b><small>복줄과 행운부적을 무료로 내려받으세요</small></span><em>›</em></button></section>
   <div class="preview"><div class="pv-t">미리보기</div>${profileBlock(sample, true)}${chartBlock(sample, true)}</div>
   <div class="sticky-cta"><button class="btn y" data-act="start">내 만세력 보기</button></div>`;
+  loadCharms(list => { const el = $('#charm-cta'); if (el && list.length) el.style.display = ''; });
+}
+/* ---------- 행운·건강 복줄 (charms.json 목록을 읽어서 표시) ----------
+ * 새 복줄을 올리려면: charms/ 폴더에 이미지를 넣고 charms.json 에 한 줄 추가 */
+let CHARMS = null;
+const isInApp = () => /Instagram|FBAN|FBAV|KAKAOTALK|NAVER|Line\//i.test(navigator.userAgent);
+function renderCharms(){
+  view.innerHTML = `<section class="pad charms">
+    <span class="cf-step">✦ 무료 나눔</span>
+    <h2 class="ch-t">행운·건강 복줄</h2>
+    <p class="cf-sub">마음에 드는 복줄과 행운부적을 폰에 저장해 배경화면이나 프로필로 쓰세요.</p>
+    ${isInApp() ? `<div class="ch-warn">인스타그램·카카오톡 안에서는 내려받기가 막힐 수 있어요. <b>이미지를 길게 눌러 저장</b>하거나, 오른쪽 위 <b>⋮ → 다른 브라우저로 열기</b>를 눌러 주세요.</div>` : ''}
+    <div class="ch-grid" id="ch-grid"><p class="ch-empty">불러오는 중…</p></div>
+    <p class="td-foot" style="margin-top:18px">개인적인 소장·선물용으로 자유롭게 쓰실 수 있어요. 다시 판매하거나 상업적으로 쓰는 것은 안 돼요.</p>
+    <div class="btn-row"><button class="btn y" data-act="start">내 만세력 보기</button></div>
+  </section>`;
+  const draw = () => {
+    const g = $('#ch-grid'); if (!g) return;
+    const list = (CHARMS || []).filter(c => c && c.file);
+    if (!list.length){ g.innerHTML = '<p class="ch-empty">곧 복줄과 행운부적이 올라와요. 조금만 기다려 주세요!</p>'; return; }
+    g.innerHTML = list.map((c, i) => `<div class="ch-card">
+      <button class="ch-img" data-act="charmView" data-i="${i}"><img src="${esc(c.thumb || c.file)}" alt="${esc(c.title)}" loading="lazy">${c.tag ? `<span>${esc(c.tag)}</span>` : ''}</button>
+      <b>${esc(c.title)}</b>${c.desc ? `<small>${esc(c.desc)}</small>` : ''}
+      <a class="ch-dl" href="${esc(c.file)}" download="${esc(c.downloadName || c.file.split('/').pop())}">내려받기</a></div>`).join('');
+  };
+  loadCharms(draw);
+}
+function loadCharms(cb){
+  const done = () => cb((CHARMS || []).filter(c => c && c.file));
+  if (CHARMS) return done();
+  fetch('charms.json?v=' + Date.now()).then(r => r.ok ? r.json() : []).then(j => { CHARMS = Array.isArray(j) ? j : (j.items || []); done(); }).catch(() => { CHARMS = []; done(); });
+}
+function openCharm(i){
+  const c = (CHARMS || []).filter(x => x && x.file)[i]; if (!c) return;
+  openModal(`<h3>${esc(c.title)}<button class="x" data-act="close">×</button></h3><img class="ch-full" src="${esc(c.file)}" alt="${esc(c.title)}">${c.desc ? `<p style="margin-top:12px">${esc(c.desc)}</p>` : ''}<p class="hint">휴대폰에서는 이미지를 <b>길게 눌러</b> 저장할 수도 있어요.</p><a class="btn y" style="display:flex;align-items:center;justify-content:center;text-decoration:none;margin-top:14px" href="${esc(c.file)}" download="${esc(c.downloadName || c.file.split('/').pop())}">내려받기</a>`);
 }
 function sideMock(R, side){
   if (side === 'l') return `<div style="padding:24px 18px"><div class="row-rev" style="margin:0;gap:6px">${R.luck.pillars.slice(0,4).map(p => luckCell(R, sIdx(p.pillar.heavenlyStem), bIdx(p.pillar.earthlyBranch), p.age, false)).join('')}</div></div>`;
@@ -1303,7 +1363,7 @@ function openSaved(){
 }
 function openDrawer(){
   $('#layer').innerHTML = `<div class="dim" data-act="closeDim" style="justify-content:flex-end;padding:0"></div><nav class="drawer"><div class="brand" style="margin-bottom:18px"><img class="logo" src="${LOGO_MARK}" alt="">운세명리 <em>만세력</em></div>
-    <a data-act="nav" data-to="/">홈</a><a data-act="nav" data-to="/form">새 만세력 보기</a><a data-act="load">저장된 만세력</a><a data-act="info" data-key="timetable">12간지 시간표</a><a data-act="info" data-key="privacy">개인정보처리방침</a>${SHOP.mode !== 'off' ? extLink(SHOP.home, SHOP.name + ' 바로가기 ↗') : ''}${state.R ? '<a data-act="nav" data-to="/result">마지막 결과 보기</a>' : ''}</nav>`;
+    <a data-act="nav" data-to="/">홈</a><a data-act="nav" data-to="/form">새 만세력 보기</a><a data-act="load">저장된 만세력</a><a data-act="nav" data-to="/charms">행운·건강 복줄 받기</a><a data-act="info" data-key="timetable">12간지 시간표</a><a data-act="info" data-key="privacy">개인정보처리방침</a>${SHOP.mode !== 'off' ? extLink(SHOP.home, SHOP.name + ' 바로가기 ↗') : ''}${state.R ? '<a data-act="nav" data-to="/result">마지막 결과 보기</a>' : ''}</nav>`;
 }
 
 /* ---------- 이벤트 ---------- */
@@ -1318,6 +1378,7 @@ document.addEventListener('click', e => {
     case 'drawer': openDrawer(); break;
     case 'nav': closeModal(); if (t.dataset.to === '/form') state.draft = blankInput(); go(t.dataset.to); break;
     case 'close': closeModal(); break;
+    case 'charmView': openCharm(+t.dataset.i); break;
     case 'info': e.stopPropagation(); openInfo(t.dataset.key); break;
     case 'city': openCity(); break;
     case 'pickCity': state.draft.city = t.dataset.city; $('#f-city').value = t.dataset.city; closeModal(); $('#f-name').dispatchEvent(new Event('input')); break;
