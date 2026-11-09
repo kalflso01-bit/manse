@@ -466,6 +466,90 @@ details[open] .sc-h:after{transform:rotate(180deg)}
 .room-page .luck:first-child{margin-top:20px}
 @media (max-width:560px){.rooms{margin:34px 16px 0}.room b{font-size:14.5px}.room small{font-size:11.5px}.tabs2{top:72px}}
 
+/* 인연·악연 궁합 */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.duo button{position:relative;border-radius:20px;padding:16px 14px;color:#fff;overflow:hidden;min-height:128px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;text-align:left}
+.duo button.yeon{background:linear-gradient(150deg,#F07C9A 0%,#D9466B 55%,#A8264E 100%)}
+.duo button.ak{background:linear-gradient(150deg,#5B3A78 0%,#3A1F4D 60%,#1F1030 100%)}
+.duo button:active{transform:scale(.98)}
+.duo i{position:absolute;right:10px;top:6px;font-style:normal;font-size:54px;font-weight:800;opacity:.18}
+.duo em{position:absolute;left:14px;top:14px;font-style:normal;font-size:11px;font-weight:800;background:rgba(255,255,255,.22);border-radius:8px;padding:2px 8px}
+.duo b{font-size:16.5px;font-weight:800;letter-spacing:-.3px;line-height:1.3}
+.duo small{font-size:12px;opacity:.88;margin-top:4px;font-weight:600}
+.room.mroom{grid-column:1/-1;flex-direction:row;align-items:center;gap:14px;padding:16px;background:linear-gradient(120deg,#FCE8EE 0%,#F6E3F0 55%,#ECE3F6 100%);border:1px solid #F2D3DF}
+.room.mroom i{width:52px;height:52px;border-radius:16px;background:#fff;color:#D9466B;border:1px solid #F2C3D2;font-size:26px;flex:none}
+.room.mroom span{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.room.mroom b{margin-top:0;font-size:16px}.room.mroom small{color:#8A5A6E;margin-top:5px}.room.mroom:after{color:#D9466B}
+.room.mroom em{font-style:normal;font-size:11px;font-weight:800;color:#fff;background:#D9466B;border-radius:8px;padding:1px 7px;margin-left:6px;vertical-align:2px}
+.cf-step.m{color:#D9466B;background:#FCE8EE;border-color:#F6C9D6}
+.mpage .ch-t{line-height:1.35}
+.mtabs{display:flex;background:var(--soft);border-radius:14px;padding:4px;gap:4px;margin-top:16px}
+.mtabs button{flex:1;font-size:14.5px;font-weight:800;color:var(--sub);border-radius:11px;padding:11px 0}
+.mtabs button.on{background:#D9466B;color:#fff}.mtabs button.on.ak{background:#4A2A63}
+.pcard{margin-top:12px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:14px 16px 16px;box-shadow:var(--sh)}
+.pcard .who{display:flex;justify-content:space-between;align-items:center}
+.pcard .who b{font-size:15px;font-weight:800;color:var(--navy);display:flex;align-items:center;gap:8px}
+.pcard .who b i{font-style:normal;width:26px;height:26px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;background:var(--navy)}
+.pcard.you .who b i{background:#D9466B}
+.mload{font-size:12.5px;font-weight:700;color:var(--gold-d);background:var(--gold3);border:1px solid var(--gold2);border-radius:14px;padding:4px 10px}
+.mrow{display:flex;gap:6px;margin-top:10px}
+.pcard .inp{height:48px;font-size:15.5px;padding:0 14px}
+.pcard .dt select{height:48px;width:80px;font-size:15px}
+.pcard .mtime{flex:none;width:100px}
+.mseg{display:flex;background:var(--soft);border-radius:12px;padding:3px;gap:3px;height:48px;flex:none;width:112px}
+.mseg button{flex:1;font-size:14.5px;font-weight:700;color:var(--sub);border-radius:9px}
+.mseg button.on{background:var(--navy);color:#fff}
+.pcard.you .mseg button.on{background:#D9466B}
+.mthread{display:flex;justify-content:center;margin:-2px 0 -14px;position:relative;z-index:2}
+.mthread span{width:40px;height:40px;border-radius:50%;background:#fff;border:2px solid #F2C3D2;display:flex;align-items:center;justify-content:center;color:#D9466B;font-weight:800;font-size:17px;box-shadow:var(--sh)}
+.mbtn{display:block;width:100%;height:58px;border-radius:18px;font-size:17.5px;font-weight:800;color:#fff;margin-top:14px;background:linear-gradient(135deg,#E25E7E,#B8305A);box-shadow:0 8px 22px rgba(217,70,107,.25)}
+.mbtn.ak{background:linear-gradient(135deg,#6B4690,#3A1F4D);box-shadow:0 8px 22px rgba(58,31,77,.3)}
+.mbtn:after{content:" ✦";color:#FFE3A8}
+.mhint{font-size:12.5px;color:var(--sub);text-align:center;margin-top:12px;line-height:1.6}
+.rh{margin-top:18px;border-radius:26px;overflow:hidden;color:#fff;padding:20px 18px 18px;position:relative}
+.rh.yeon{background:radial-gradient(120% 100% at 50% 0%,#F48BA6 0%,#D9466B 50%,#9C2347 100%)}
+.rh.ak{background:radial-gradient(120% 100% at 50% 0%,#6B4690 0%,#3A1F4D 55%,#1B0E2A 100%)}
+.pair{display:flex;align-items:flex-start;justify-content:space-between;position:relative}
+.pp{display:flex;flex-direction:column;align-items:center;width:100px;text-align:center}
+.pp .bd{width:72px;height:72px;border-radius:22px;border:1.5px solid rgba(255,255,255,.55);background:rgba(255,255,255,.12);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.pp .bd b{font-size:22px;font-weight:800;letter-spacing:2px;color:#FFE3A8}
+.pp .bd small{font-size:10.5px;opacity:.8}
+.pp .nm{font-size:14px;font-weight:800;margin-top:6px}
+.pp .tt{font-size:11px;opacity:.85;margin-top:1px;word-break:keep-all;line-height:1.4}
+.pair svg{position:absolute;left:86px;right:86px;top:6px;width:calc(100% - 172px);height:66px}
+.mscore{text-align:center;margin-top:14px}
+.mscore small{font-size:12.5px;font-weight:800;letter-spacing:.06em;opacity:.9}
+.mscore b{display:block;font-size:52px;font-weight:800;line-height:1;margin-top:4px;letter-spacing:-1px}
+.mscore b span{font-size:20px;opacity:.85;margin-left:2px}
+.mscore h2{font-size:20px;font-weight:800;margin-top:10px;letter-spacing:-.3px}
+.mscore p{font-size:13.5px;opacity:.9;margin-top:6px;line-height:1.6}
+.mbars{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;margin-top:16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:12px 14px}
+.mbars div{font-size:12.5px;font-weight:700}
+.mbars span{display:flex;justify-content:space-between}.mbars em{font-style:normal}
+.mbars i{display:block;height:6px;border-radius:3px;background:rgba(255,255,255,.25);margin-top:5px;overflow:hidden}
+.mbars i:after{content:"";display:block;height:100%;width:var(--w);background:#FFE3A8;border-radius:3px}
+.msh{font-size:17px;font-weight:800;color:var(--navy);margin:24px 2px 0;display:flex;align-items:center;gap:8px}
+.msh:before{content:"";width:4px;height:17px;border-radius:2px;background:#D9466B}
+.msh.p:before{background:#6B4690}
+.lk{margin-top:8px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:13px 14px;box-shadow:var(--sh);display:flex;gap:12px}
+.lk .ic{width:44px;height:44px;border-radius:12px;flex:none;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;letter-spacing:-1px}
+.lk .ic.g{background:#FCE8EE;color:#D9466B}.lk .ic.b{background:#EFE6F6;color:#6B4690}.lk .ic.n{background:var(--soft);color:var(--sub)}
+.lk b{display:block;font-size:15px;font-weight:800;color:var(--navy)}
+.lk b em{font-style:normal;font-size:11px;font-weight:800;border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:1px}
+.lk b em.g{background:#FCE8EE;color:#D9466B}.lk b em.b{background:#EFE6F6;color:#6B4690}.lk b em.n{background:var(--soft);color:var(--sub)}
+.lk p{font-size:13.5px;line-height:1.65;margin-top:3px;color:#3A4166}
+.story{margin-top:8px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--sh);font-size:14.5px;line-height:1.8}
+.story.y{background:linear-gradient(135deg,#FFF6F8,#FFFDF8);border-color:#F6D7E0}
+.story.a{background:linear-gradient(135deg,#F7F2FB,#FFFDF8);border-color:#E6DAF2}
+.mtips{margin-top:8px;display:grid;gap:6px}
+.mtips div{display:flex;gap:10px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:11px 12px;font-size:13.5px;line-height:1.6}
+.mtips b{flex:none;width:22px;height:22px;border-radius:7px;background:#6B4690;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px}
+.mshare{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px}
+.mshare button{display:flex;align-items:center;justify-content:center;gap:6px;height:50px;border-radius:14px;font-size:14px;font-weight:800;padding:0 6px;text-align:center;line-height:1.3}
+.mshare .s1{background:var(--card);border:1.5px solid var(--line);color:var(--navy)}
+.mshare .s2{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff}
+.mpage .disc{font-size:12px;color:var(--sub);text-align:center;margin-top:16px;line-height:1.6}
+
 /* 나의 별자리 */
 .zsym{font-family:"Segoe UI Symbol","Apple Symbols","Noto Sans Symbols 2","Noto Sans Symbols",serif;font-weight:400;font-style:normal}
 .feat{grid-template-columns:repeat(4,1fr)}
@@ -942,6 +1026,8 @@ function render(){
   if (route === '/confirm' && state.input) return renderConfirm();
   if (route === '/result' && state.input) return renderResult();
   if (route === '/charms') return renderCharms();
+  if (route === '/match/result' && state.mR) return renderMatchResult();
+  if (route.startsWith('/match')) return renderMatchForm();
   if (route.startsWith('/room/') && state.input){ state.fromRoom = true; return renderRoom(route.slice(6)); }
   renderLanding();
 }
@@ -954,6 +1040,7 @@ function renderLanding(){
     <h1>태어난 순간의 하늘을<br><em>정확하게</em> 읽는 만세력</h1>
     <p>한국천문연구원(KASI) 절기·음력 기준에 서머타임과 출생 지역의 시차까지 보정해 사주 원국을 계산합니다.</p>
     <button class="charm-cta" data-act="nav" data-to="/charms"><i>福</i><span><b>행운·건강 복줄 받아가기</b><small>복줄과 행운부적을 무료로 내려받으세요</small></span><em>›</em></button>
+    <div class="duo"><button class="yeon" data-act="match" data-mode="yeon"><i>緣</i><em>NEW</em><b>운명의 배우자<br>찾기</b><small>두 사람의 운명적 만남</small></button><button class="ak" data-act="match" data-mode="ak"><i>業</i><em>NEW</em><b>운명의 악연<br>찾아보기</b><small>끊어도 다시 엮이는 사이?</small></button></div>
     <div class="feat">
       <div><i style="background:var(--gold3);color:var(--gold-d)">命</i><b>정밀 계산</b><span>절기·서머타임<br>지역 시차 보정</span></div>
       <div><i style="background:var(--woodL);color:var(--wood)">五</i><b>한눈에 원국</b><span>오행·십성<br>신살·합충</span></div>
@@ -1525,6 +1612,7 @@ const ROOMS = [
   {k:'gulja', g:'字', t:'내 사주 글자 풀이'},
   {k:'sinsal', g:'星', t:'신살·길성 확인하기'},
   {k:'star', g:'✦', t:'나의 별자리'},
+  {k:'match', g:'緣', t:'인연·악연 궁합'},
   {k:'hap', g:'合', t:'합·충·궁성'},
   {k:'ohaeng', g:'五', t:'오행·신강약'},
   {k:'luck', g:'運', t:'대운·연운·월운'},
@@ -1541,7 +1629,9 @@ function roomTeaser(R, k){
 }
 function roomsBlock(R){
   return `<section class="rooms" id="rooms"><h3>나의 사주 방</h3><p class="rooms-sub">궁금한 방을 눌러 들어가 보세요.</p>
-    <div class="room-grid">${ROOMS.map((r, i) => r.k === 'star'
+    <div class="room-grid">${ROOMS.map((r, i) => r.k === 'match'
+      ? `<button class="room mroom" data-act="match" data-mode="yeon"><i>緣</i><span><b>${r.t} <em>NEW</em></b><small>그 사람의 생년월일만 넣으면 바로 확인</small></span></button>`
+      : r.k === 'star'
       ? `<button class="room star" data-act="room" data-k="star"><i>${zSym(astro(R).s)}</i><span><b>${r.t} <em>NEW</em></b><small>${starTeaser(R)}</small></span></button>`
       : `<button class="room ${i < 2 ? 'hot' : ''}" data-act="room" data-k="${r.k}"><i>${r.g}</i><b>${r.t}</b><small>${roomTeaser(R, r.k)}</small></button>`).join('')}</div></section>`;
 }
@@ -1551,7 +1641,7 @@ function consultCta(text){
   return `<section class="shop room-shop"><h3>${text}</h3><p class="shop-sub">${SHOP.name}에서 전문 사주 풀이를 받아보세요.</p>${extLink(SHOP.home, `<span>${SHOP.name} 전체 상품 보기</span><small>koreaunse.com ↗</small>`, 'all')}${SHOP.consult ? extLink(SHOP.consult, `<span>${SHOP.name} 전통사주 상담 바로가기</span><small>peakon.me ↗</small>`, 'all') : ''}</section>`;
 }
 function roomNav(cur){
-  return `<div class="room-nav"><div class="rn-t">다른 방 보기</div><div class="rn-list">${ROOMS.filter(r => r.k !== cur).map(r => `<button data-act="room" data-k="${r.k}"><i>${r.g}</i>${r.t}</button>`).join('')}</div>
+  return `<div class="room-nav"><div class="rn-t">다른 방 보기</div><div class="rn-list">${ROOMS.filter(r => r.k !== cur).map(r => r.k === 'match' ? `<button data-act="match" data-mode="yeon"><i>${r.g}</i>${r.t}</button>` : `<button data-act="room" data-k="${r.k}"><i>${r.g}</i>${r.t}</button>`).join('')}</div>
     <button class="btn g" data-act="nav" data-to="/result" style="margin-top:14px">내 만세력 결과로 돌아가기</button></div>`;
 }
 const pillarGlyph = (R, i, both) => { const p = R.P[i]; const s = `<b class="b-${EL[stEl(p.s)]}">${STH[p.s]}</b>`, b = `<b class="b-${EL[BR_EL[p.b]]}">${BRH[p.b]}</b>`; return `<div class="gl">${both === 'b' ? b : both === 's' ? s : s + b}</div>`; };
@@ -1765,6 +1855,221 @@ function starRoomBody(R){
       <div class="eq"><span><i class="c-${EL[stEl(R.dm)]}">${STH[R.dm]}</i>일간 ${ST[R.dm]}${EL[stEl(R.dm)]}(${DM_I[R.dm][0]})</span><em>×</em><span><i>${zSym(k)}</i>${d[0]}(${ZEL[el]})</span></div><p>${mix[1]}</p></div>`;
 }
 
+/* ======================= 인연·악연 궁합 (두 사람) ======================= */
+const blankP = g => ({name:'', gender:g || 'F', cal:'S', date:'', time:'', unknownTime:false, yajasi:false, city:'서울특별시'});
+const pairIn = (T, a, b) => T.some(x => (x[0] === a && x[1] === b) || (x[1] === a && x[0] === b));
+const PAIR = {
+  hap6: (a, b) => (a + b) % 12 === 1,
+  sam: (a, b) => a !== b && [[8,0,4],[11,3,7],[2,6,10],[5,9,1]].some(G => G.includes(a) && G.includes(b)),
+  chung: (a, b) => Math.abs(a - b) === 6,
+  won: (a, b) => pairIn([[0,7],[1,6],[2,9],[3,8],[11,4],[5,10]], a, b),
+  hyeong: (a, b) => pairIn([[0,3],[2,5],[5,8],[2,8],[1,10],[10,7],[1,7]], a, b) || (a === b && [4,6,9,11].includes(a)),
+  hae: (a, b) => pairIn([[0,7],[1,6],[2,5],[3,4],[8,11],[9,10],[0,9],[1,4],[2,11],[3,6],[8,5],[10,7]], a, b)
+};
+const eunN = s => s + (hasJong(s.replace(/\(.*\)$/, '')) ? '과' : '와');
+function matchAnalyze(RA, RB){
+  const A = RA.inp.name || '나', B = RB.inp.name || '상대';
+  const a = RA.dm, b = RB.dm, ea = stEl(a), eb = stEl(b);
+  const da = RA.P[1].b, db = RB.P[1].b, ya = RA.P[3].b, yb = RB.P[3].b;
+  const L = [], f = {};
+  // 1) 일간
+  if (Math.abs(a - b) === 5){ f.sHap = 1; L.push({g:'g', hic: STH[a] + STH[b], t:'일간끼리 천간합', lab:'찰떡', p:'두 사람의 본성(일간)이 합을 이뤄요. 처음 만났을 때부터 이유 없이 끌리고, 함께 있으면 마음이 놓이는 사이예요.'}); }
+  else if (stYang(a) === stYang(b) && ((eb - ea + 5) % 5 === 2 || (ea - eb + 5) % 5 === 2)){ f.sChung = 1; L.push({g:'b', hic: STH[a] + STH[b], t:'일간끼리 천간충', lab:'충돌', p: eunN(DM_I[a][0] + '(' + STH[a] + ')') + ' ' + DM_I[b][0] + '(' + STH[b] + ')의 관계예요. 생각과 가치관이 정면으로 부딪혀 사소한 일도 자존심 싸움이 되기 쉬워요.'}); }
+  else if (a === b){ f.same = 1; L.push({g:'n', hic: STH[a] + STH[b], t:'일간이 같은 닮은꼴', lab:'닮음', p:'성향이 비슷해 편하지만, 같은 걸 원해 서로 경쟁하기도 해요.'}); }
+  else if ((eb - ea + 5) % 5 === 1 || (ea - eb + 5) % 5 === 1){ f.saeng = 1; const giver = (eb - ea + 5) % 5 === 1 ? A : B, taker = giver === A ? B : A;
+    L.push({g:'g', hic: STH[a] + STH[b], t:'서로 살려 주는 상생', lab:'좋음', p: giver + '님이 ' + taker + '님을 키워 주는 관계예요. 챙겨 주는 사람과 기대는 사람이 자연스럽게 나뉘어 서로 편안해요.'}); }
+  else if (ea === eb){ f.same = 1; L.push({g:'n', hic: STH[a] + STH[b], t:'같은 기운의 닮은꼴', lab:'닮음', p:'같은 오행끼리라 말하지 않아도 통하지만, 고집이 부딪힐 때도 있어요.'}); }
+  else { f.geuk = 1; L.push({g:'n', hic: STH[a] + STH[b], t:'서로 다듬어 주는 사이', lab:'긴장', p:'한쪽이 다른 쪽을 다듬어 주는 관계라 설렘과 긴장감이 함께 있어요.'}); }
+  // 2) 일지 (배우자 자리)
+  const dic = BRH[da] + BRH[db];
+  if (PAIR.hap6(da, db)){ f.dHap = 1; L.push({g:'g', hic: dic, t:'배우자 자리끼리 육합', lab:'찰떡', p:'서로의 일지(배우자 자리)가 합을 이뤄 같이 살수록 편안해지는 궁합이에요.'}); }
+  else if (PAIR.sam(da, db)){ f.dSam = 1; L.push({g:'g', hic: dic, t:'배우자 자리끼리 반합', lab:'좋음', p:'같은 목표를 향해 함께 가는 동지 같은 관계예요. 같이 무언가를 이루기 좋아요.'}); }
+  if (PAIR.chung(da, db)){ f.dChung = 1; L.push({g:'b', hic: dic, t:'배우자 자리끼리 지지충', lab:'충돌', p:'가까워질수록 다투는 사이예요. 같이 살면 생활 습관 차이로 부딪히기 쉬워요.'}); }
+  if (PAIR.won(da, db)){ f.dWon = 1; L.push({g:'b', hic: dic, t:'배우자 자리끼리 원진', lab:'주의', p:'이유 없이 서운하고 미운 감정이 쌓이기 쉬워요. 말 한마디에 오해가 생겨요.'}); }
+  if (PAIR.hyeong(da, db)){ f.dHy = 1; L.push({g:'b', hic: dic, t:'배우자 자리끼리 형(刑)', lab:'주의', p:'서로를 고치려 들다 상처를 주기 쉬운 관계예요. 있는 그대로 받아들이는 연습이 필요해요.'}); }
+  else if (!f.dWon && !f.dChung && PAIR.hae(da, db)){ f.dHae = 1; L.push({g:'b', hic: dic, t:'배우자 자리끼리 해·파', lab:'주의', p:'잘 가다가도 작은 일로 틀어지기 쉬워요. 약속과 말을 꼼꼼히 챙기세요.'}); }
+  // 3) 띠
+  const yt = '띠 궁합 · ' + ANIMAL[ya] + '띠 × ' + ANIMAL[yb] + '띠', yic = BRH[ya] + BRH[yb];
+  if (PAIR.hap6(ya, yb)){ f.yHap = 1; L.push({g:'g', hic: yic, t: yt, lab:'좋음', p:'태어난 해의 기운이 합을 이뤄 집안 분위기와 생활 방식이 잘 맞아요.'}); }
+  else if (PAIR.sam(ya, yb)){ f.ySam = 1; L.push({g:'g', hic: yic, t: yt, lab:'좋음', p:'띠끼리 삼합이라 함께 일을 도모하면 잘 풀려요.'}); }
+  else if (PAIR.chung(ya, yb)){ f.yChung = 1; L.push({g:'b', hic: yic, t: yt, lab:'충돌', p:'집안 배경이나 생활 방식이 달라 처음엔 낯설 수 있어요.'}); }
+  else if (PAIR.won(ya, yb)){ f.yWon = 1; L.push({g:'b', hic: yic, t: yt, lab:'주의', p:'띠끼리 원진이라 사소한 일로 마음이 상하기 쉬워요.'}); }
+  else L.push({g:'n', hic: yic, t: yt, lab:'무난', p:'태어난 해끼리는 크게 부딪히지 않아요. 집안끼리도 무난하게 지낼 수 있어요.'});
+  // 4) 배우자의 별 (남자는 재성, 여자는 관성)
+  const spouse = (R1, R2, n1, n2) => { const tg = tenGod(R1.dm, 's', R2.dm), k = grpOf(tg);
+    if ((R1.inp.gender === 'M' && k === 2) || (R1.inp.gender === 'F' && k === 3)) return {g:'g', hic: STH[R2.dm], t:'배우자의 별', lab:'인연', p: n2 + '님의 일간이 ' + n1 + '님에게 ' + tg + '이에요. ' + (R1.inp.gender === 'M' ? '남자에게 아내' : '여자에게 남편') + '를 뜻하는 별이라, 배우자로 느끼기 쉬운 사람이에요.'};
+    return null; };
+  const sp = RA.inp.gender !== RB.inp.gender ? (spouse(RA, RB, A, B) || spouse(RB, RA, B, A)) : null; if (sp){ f.spouse = 1; L.push(sp); }
+  // 5) 오행 보완
+  const fill = []; [0,1,2,3,4].forEach(e => { if (RA.elPct[e] === 0 && RB.elPct[e] >= 12.5) fill.push([A, B, e]); if (RB.elPct[e] === 0 && RA.elPct[e] >= 12.5) fill.push([B, A, e]); });
+  if (fill.length){ f.fill = Math.min(2, fill.length); L.push({g:'g', hic: fill.map(v => ELH[v[2]]).join(''), t:'서로 채워 주는 기운', lab:'보완', p: fill.map(([p, q, e]) => p + '님 사주에 없는 ' + EL[e] + '(' + ELH[e] + ')' + (hasJong(EL[e]) ? '을' : '를') + ' ' + q + '님이 채워 줘요.').join(' ') + ' 곁에 있으면 마음이 단단해지는 관계예요.'}); }
+  // 6) 별자리
+  const za = astro(RA).s, zb = astro(RB).s, dz = (zb - za + 12) % 12;
+  let zr;
+  if (dz === 4 || dz === 8 || dz === 0) zr = ['g', '찰떡', dz === 0 ? '같은 별자리라 말하지 않아도 통하고 취향이 비슷해요.' : '같은 원소의 별자리라 말하지 않아도 마음이 통해요.', 'zG'];
+  else if (dz === 2 || dz === 10) zr = ['g', '좋음', '서로 부족한 부분을 자연스럽게 채워 주는 별자리 조합이에요.', 'zO'];
+  else if (dz === 6) zr = ['n', '끌림', '정반대 별자리라 강하게 끌리지만, 맞춰 가는 노력이 필요해요.', 'zX'];
+  else if (dz === 3 || dz === 9) zr = ['b', '노력', '성향이 달라 부딪힐 수 있지만, 그만큼 배울 점도 많아요.', 'zH'];
+  else zr = ['n', '무난', '크게 부딪히지 않는 편안한 별자리 조합이에요.', 'zN'];
+  f[zr[3]] = 1;
+  L.push({g: zr[0], hic: ZS[za] + ZS[zb], zs: 1, t: '별자리 · ' + zName(za) + ' × ' + zName(zb), lab: zr[1], p: zr[2]});
+  // 점수 (같은 두 사람은 항상 같은 점수)
+  const c = v => Math.max(30, Math.min(98, Math.round(v)));
+  const nG = L.filter(v => v.g === 'g').length, nB = L.filter(v => v.g === 'b').length;
+  const yeon = Math.max(38, Math.min(98, 55 + (f.sHap ? 15 : 0) + (f.saeng ? 6 : 0) + (f.dHap ? 12 : f.dSam ? 8 : 0) + (f.yHap ? 8 : f.ySam ? 5 : 0) + (f.fill || 0) * 4 + (f.zG ? 6 : f.zO ? 4 : f.zX ? 2 : f.zH ? -3 : 0) + (f.spouse ? 6 : 0) - (f.sChung ? 10 : 0) - (f.dChung ? 10 : 0) - (f.dWon ? 6 : 0) - (f.dHy || f.dHae ? 4 : 0) - (f.yChung ? 5 : 0) - (f.yWon ? 3 : 0)));
+  const ak = Math.max(12, Math.min(96, 30 + (f.sChung ? 20 : 0) + (f.dChung ? 20 : 0) + (f.sChung && f.dChung ? 10 : 0) + (f.dWon ? 12 : 0) + (f.dHy ? 8 : 0) + (f.dHae ? 6 : 0) + (f.yChung ? 8 : 0) + (f.yWon ? 6 : 0) + (f.zH ? 5 : f.zX ? 3 : 0) + (f.same ? 3 : 0) + (f.geuk ? 4 : 0) - (f.sHap ? 8 : 0) - (f.dHap ? 8 : 0)));
+  const subY = [['끌림', c(50 + (f.sHap ? 25 : 0) + (f.dHap ? 10 : f.dSam ? 6 : 0) + (f.yHap ? 5 : 0) + (f.saeng ? 5 : 0) + (f.zG ? 15 : f.zO ? 10 : f.zX ? 12 : 0) + (f.spouse ? 10 : 0) - (f.sChung ? 5 : 0))],
+    ['대화', c(56 + (f.sHap ? 16 : 0) + (f.saeng ? 18 : 0) + (f.dHap || f.dSam ? 6 : 0) + (f.zO || f.zG ? 8 : 0) - (f.sChung ? 15 : 0) - (f.dWon ? 8 : 0) - (f.zH ? 8 : 0))],
+    ['생활', c(52 + (f.dHap ? 25 : f.dSam ? 15 : 0) + (f.yHap ? 10 : f.ySam ? 6 : 0) - (f.dChung ? 20 : 0) - (f.dWon ? 10 : 0) - (f.dHy || f.dHae ? 6 : 0))],
+    ['미래', c(52 + (f.fill || 0) * 10 + (f.yHap ? 10 : 0) + (f.spouse ? 10 : 0) + (f.saeng ? 6 : 0) - (f.yChung ? 10 : 0))]];
+  const subA = [['부딪힘', c(30 + (f.sChung ? 30 : 0) + (f.dChung ? 30 : 0) + (f.dHy ? 10 : 0) + (f.yChung ? 8 : 0) + (f.geuk ? 8 : 0))],
+    ['오해', c(30 + (f.dWon ? 30 : 0) + (f.dHae ? 15 : 0) + (f.zH ? 15 : 0) + (f.yWon ? 10 : 0))],
+    ['집착', c(30 + (f.dChung ? 15 : 0) + (f.dWon ? 15 : 0) + ((f.sHap || f.dHap) && nB ? 20 : 0) + (f.zX ? 10 : 0) + (f.spouse ? 8 : 0))],
+    ['회복력', c(50 + (f.sHap ? 20 : 0) + (f.dHap ? 15 : 0) + (f.saeng ? 15 : 0) - (f.dChung ? 10 : 0) - (f.dWon ? 8 : 0))]];
+  return {A, B, L, f, nG, nB, yeon, ak, subY, subA};
+}
+function matchTexts(M, RA, RB, mode){
+  const {A, B, f} = M, a = RA.dm, b = RB.dm, ea = stEl(a), eb = stEl(b);
+  if (mode === 'yeon'){
+    const s = M.yeon;
+    const t = s >= 88 ? '전생부터 이어진 붉은 실' : s >= 78 ? '서로를 알아보는 운명의 짝' : s >= 68 ? '천천히 깊어지는 따뜻한 인연' : s >= 55 ? '노력으로 완성되는 인연' : '다름을 배우는 인연';
+    const hapN = (f.sHap ? 1 : 0) + (f.dHap || f.dSam ? 1 : 0) + (f.yHap || f.ySam ? 1 : 0);
+    const one = hapN >= 3 ? '세 군데가 서로 합을 이루는, 보기 드문 운명적 만남이에요.' : hapN === 2 ? '두 군데가 합을 이뤄 서로 끌리는 사이예요.' : hapN === 1 ? '한 군데에서 합을 이뤄 마음이 통하는 사이예요.' : '합은 적지만 서로 다른 점이 매력이 되는 사이예요.';
+    let st = eunN(DM_I[a][0] + '(' + STH[a] + ')') + ' ' + DM_I[b][0] + '(' + STH[b] + ')의 만남이에요. ';
+    if (f.sHap) st += '두 기운이 합을 이루면 서로에게 없는 것을 채우며 하나가 돼요. ';
+    else if ((eb - ea + 5) % 5 === 1) st += A + '님이 ' + B + '님을 키워 주고 챙겨 주는 관계예요. ';
+    else if ((ea - eb + 5) % 5 === 1) st += B + '님이 ' + A + '님을 키워 주고 챙겨 주는 관계예요. ';
+    else if (ea === eb) st += '닮은 기운끼리라 말하지 않아도 통하는 사이예요. ';
+    else st += '한쪽이 다른 쪽을 다듬어 주는 관계라 긴장감과 설렘이 함께 있어요. ';
+    if (f.dHap) st += '배우자 자리까지 합을 이루니 함께 살수록 더 편안해져요. ';
+    st += s >= 85 ? '처음엔 성격이 달라 보여도 시간이 갈수록 "이 사람이다" 싶어지는 인연이에요.' : s >= 68 ? '서로를 알아 갈수록 더 단단해지는 인연이에요.' : '다른 점을 인정할수록 오래가는 인연이에요.';
+    let ca;
+    if ((ea - eb + 5) % 5 === 2) ca = B + '님의 ' + EL[eb] + '(' + ELH[eb] + ') 기운이 ' + A + '님을 누르기 쉬워 가끔은 ' + A + '님이 지칠 수 있어요.';
+    else if ((eb - ea + 5) % 5 === 2) ca = A + '님의 ' + EL[ea] + '(' + ELH[ea] + ') 기운이 ' + B + '님을 누르기 쉬워 가끔은 ' + B + '님이 지칠 수 있어요.';
+    else if (f.dChung || f.dWon) ca = '가까워질수록 작은 일에 서운해지기 쉬워요.';
+    else ca = '익숙해질수록 표현이 줄기 쉬워요. 고맙다는 말을 자주 건네 주세요.';
+    ca += ' 서운한 건 그날 바로 말하기로 약속하면 오래가요.';
+    return {score: s, title: t, one, story: st, caution: ca, sub: M.subY};
+  }
+  const s = M.ak;
+  const t = s >= 80 ? '끊어도 다시 엮이는 질긴 인연' : s >= 65 ? '자꾸 부딪히는 앙숙 같은 사이' : s >= 50 ? '가끔 불꽃이 튀는 사이' : s >= 35 ? '악연보다는 서로 다른 사람' : '악연과는 거리가 먼 사이';
+  const one = M.nB >= 3 ? '여러 곳에서 부딪히지만, 그만큼 서로를 강하게 끌어당기는 사이예요.' : M.nB === 2 ? '부딪히는 만큼 서로를 강하게 끌어당기는 사이예요.' : M.nB === 1 ? '한 군데에서 부딪히는 지점이 있는 사이예요.' : '크게 부딪히는 지점이 없는 사이예요.';
+  let st;
+  if (f.sChung || f.dChung) st = '충(沖)은 서로를 밀어내는 힘이면서 동시에 강하게 끌어당기는 힘이에요. 그래서 헤어져도 다시 연락하게 되고, 미운데 신경 쓰이는 사이가 되기 쉬워요. 두 사람에게는 서로 없는 것을 정확히 찌르는 날카로운 거울 같은 인연이에요.';
+  else if (f.dWon || f.yWon) st = '원진(怨嗔)은 이유 없이 미운 감정이 쌓이는 관계예요. 하지만 서로를 너무 잘 알기 때문에 생기는 감정이기도 해서, 오해만 풀리면 누구보다 가까워질 수 있어요.';
+  else if (s >= 50) st = '큰 충돌은 아니어도 기운의 결이 달라 가끔 불꽃이 튀는 사이예요. 다른 점이 오히려 서로를 자극하는 힘이 되기도 해요.';
+  else st = A + '님과 ' + B + '님 사이엔 큰 충돌이 없어요. 악연이라기보다는 아직 서로를 덜 알 뿐이에요. 마음을 열면 오히려 좋은 인연이 될 수 있어요.';
+  return {score: s, title: t, one, story: st, sub: M.subA};
+}
+function matchShop(mode){
+  if (SHOP.mode === 'off') return '';
+  if (SHOP.mode === 'simple') return '<section class="shop room-shop">' + extLink(SHOP.home, '<span>' + SHOP.name + ' 바로가기</span><small>koreaunse.com ↗</small>') + '</section>';
+  const pick = tags => SHOP.items.filter(it => tags.includes(it.tag)).map(it => extLink(it.url, '<span>' + it.title + '</span><small>' + it.tag + ' ↗</small>')).join('');
+  const all = extLink(SHOP.home, '<span>' + SHOP.name + ' 전체 상품 보기</span><small>koreaunse.com ↗</small>', 'all');
+  return mode === 'yeon'
+    ? '<section class="shop room-shop"><h3>두 사람의 궁합, 더 깊이 알고 싶다면</h3><p class="shop-sub">' + SHOP.name + '에서 전문 궁합 풀이를 받아보세요.</p>' + pick(['궁합', '연애']) + all + '</section>'
+    : '<section class="shop room-shop"><h3>이 인연, 계속 이어가도 될까?</h3><p class="shop-sub">' + SHOP.name + '에서 두 사람의 앞날을 자세히 풀어보세요.</p>' + pick(['재회', '고민상담']) + all + '</section>';
+}
+function mPersonCard(who, p){
+  const me = who === 'a';
+  return `<div class="pcard ${me ? '' : 'you'}">
+    <div class="who"><b><i>${me ? '나' : '너'}</i>${me ? '나의 정보' : '상대의 정보'}</b><button class="mload" data-act="mPick" data-who="${who}">${me ? '내 만세력 불러오기' : '저장된 사람 불러오기'}</button></div>
+    <div class="mrow"><input class="inp" id="m${who}-name" maxlength="12" placeholder="${me ? '이름' : '이름 또는 별명'}" value="${esc(p.name)}"><div class="mseg" data-who="${who}"><button data-g="F" class="${p.gender === 'F' ? 'on' : ''}">여</button><button data-g="M" class="${p.gender === 'M' ? 'on' : ''}">남</button></div></div>
+    <div class="dt mrow"><select id="m${who}-cal"><option value="S" ${p.cal === 'S' ? 'selected' : ''}>양력</option><option value="M" ${p.cal === 'M' ? 'selected' : ''}>음력</option><option value="L" ${p.cal === 'L' ? 'selected' : ''}>윤달</option></select>
+      <input class="inp" id="m${who}-date" inputmode="numeric" placeholder="1990/01/01" value="${esc(p.date)}"><input class="inp mtime" id="m${who}-time" inputmode="numeric" placeholder="시간(선택)" value="${p.unknownTime ? '' : esc(p.time)}"></div>
+  </div>`;
+}
+function renderMatchForm(){
+  const mode = state.mMode || 'yeon';
+  state.mA = state.mA || (state.input ? {...state.input} : blankP('F'));
+  state.mB = state.mB || blankP(state.mA.gender === 'F' ? 'M' : 'F');
+  view.innerHTML = `<section class="pad mpage">
+    <span class="cf-step m">✦ 인연·악연 궁합</span>
+    <h2 class="ch-t">두 사람의 생년월일로<br>운명의 실을 확인해 보세요</h2>
+    <p class="cf-sub">태어난 시간은 몰라도 괜찮아요.</p>
+    <div class="mtabs"><button class="${mode === 'yeon' ? 'on' : ''}" data-act="mMode" data-mode="yeon">운명의 인연</button><button class="${mode === 'ak' ? 'on ak' : ''}" data-act="mMode" data-mode="ak">운명의 악연</button></div>
+    ${mPersonCard('a', state.mA)}
+    <div class="mthread"><span>${mode === 'yeon' ? '緣' : '業'}</span></div>
+    ${mPersonCard('b', state.mB)}
+    <div class="err" id="m-err"></div>
+    <button class="mbtn ${mode}" data-act="mSubmit">${mode === 'yeon' ? '운명의 인연 확인하기' : '운명의 악연 확인하기'}</button>
+    <p class="mhint">입력한 정보는 폰 안에서만 계산되고 어디에도 전송되지 않아요.<br>출생지는 불러온 만세력이 없으면 서울 기준으로 계산해요.</p>
+  </section>`;
+  ['a', 'b'].forEach(w => {
+    const P = () => w === 'a' ? state.mA : state.mB;
+    const fmt = (el, kind) => el.addEventListener('input', () => { let v = el.value.replace(/\D/g, '');
+      if (kind === 'date'){ v = v.slice(0, 8); el.value = v.length > 6 ? v.slice(0,4) + '/' + v.slice(4,6) + '/' + v.slice(6) : v.length > 4 ? v.slice(0,4) + '/' + v.slice(4) : v; P().date = el.value; }
+      else { v = v.slice(0, 4); el.value = v.length > 2 ? v.slice(0,2) + ':' + v.slice(2) : v; P().time = el.value; P().unknownTime = !el.value; } });
+    fmt($('#m' + w + '-date'), 'date'); fmt($('#m' + w + '-time'), 'time');
+    $('#m' + w + '-name').addEventListener('input', e => P().name = e.target.value.trim());
+    $('#m' + w + '-cal').addEventListener('change', e => P().cal = e.target.value);
+    document.querySelector('.mseg[data-who="' + w + '"]').addEventListener('click', e => { const bt = e.target.closest('button'); if (!bt) return; P().gender = bt.dataset.g; [...bt.parentElement.children].forEach(x => x.classList.toggle('on', x === bt)); });
+  });
+}
+function mValidate(p, who){
+  if (!/^\d{4}\/\d{2}\/\d{2}$/.test(p.date)) return who + ' 생년월일을 1990/01/01 형식으로 입력해 주세요.';
+  if (p.time && !/^\d{2}:\d{2}$/.test(p.time)) return who + ' 태어난 시간을 확인해 주세요.';
+  const e = validate({...p, unknownTime: !p.time}); return e ? who + ': ' + e : '';
+}
+function renderMatchResult(){
+  const {RA, RB, M} = state.mR, mode = state.mMode || 'yeon';
+  const X = matchTexts(M, RA, RB, mode), yeon = mode === 'yeon';
+  const badge = R => { const d = R.P[1]; return `<div class="pp"><div class="bd"><b>${STH[d.s]}${BRH[d.b]}</b><small>日柱</small></div><div class="nm">${esc(R.inp.name || (R === RA ? '나' : '상대'))}</div><div class="tt">${ANIMAL[R.P[3].b]}띠 · ${zName(astro(R).s)}</div></div>`; };
+  const thread = yeon ? '<svg viewBox="0 0 160 70" preserveAspectRatio="none"><path d="M0 36 C 30 10, 50 62, 80 36 S 130 10, 160 36" stroke="#FFE3A8" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M80 26 c-6-8-18-4-14 6 c2 6 14 12 14 12 s12-6 14-12 c4-10-8-14-14-6z" fill="#FFE3A8"/></svg>'
+    : '<svg viewBox="0 0 160 70" preserveAspectRatio="none"><path d="M0 36 C 20 0, 40 70, 62 30 C 70 14, 84 60, 92 40 C 104 10, 120 64, 160 36" stroke="#D9C3F0" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M72 20 l16 30 M88 20 l-16 30" stroke="#FFB4C6" stroke-width="2.6" stroke-linecap="round"/></svg>';
+  const order = yeon ? ['g', 'n', 'b'] : ['b', 'n', 'g'];
+  const items = order.flatMap(g => M.L.filter(x => x.g === g));
+  const lk = x => `<div class="lk"><div class="ic ${x.g}${x.zs ? ' zsym' : ''}">${x.hic}</div><div><b>${x.t}<em class="${x.g}">${x.lab}</em></b><p>${x.p}</p></div></div>`;
+  const tips = ['옳고 그름을 따지기보다 "네 생각은 그렇구나"로 대화를 시작하세요.', '싸운 뒤 바로 결론 내지 말고, 하루 쉬었다가 다시 이야기하세요.', '각자의 공간과 시간을 존중하면 부딪힘이 눈에 띄게 줄어요.'];
+  view.innerHTML = `<section class="pad mpage">
+    <div class="rh ${mode}"><div class="pair">${badge(RA)}${thread}${badge(RB)}</div>
+      <div class="mscore"><small>${yeon ? '인연 지수' : '악연 지수'}</small><b>${X.score}<span>점</span></b><h2>${X.title}</h2><p>${X.one}</p></div>
+      <div class="mbars">${X.sub.map(([n, v]) => `<div><span>${n}<em>${v}</em></span><i style="--w:${v}%"></i></div>`).join('')}</div></div>
+    <div class="msh ${yeon ? '' : 'p'}">${yeon ? '두 사람을 잇는 인연의 끈' : '두 사람이 부딪히는 지점'}</div>
+    ${items.map(lk).join('')}
+    <div class="msh ${yeon ? '' : 'p'}">${yeon ? '두 사람의 인연 이야기' : '왜 자꾸 엮일까?'}</div>
+    <div class="story ${yeon ? 'y' : 'a'}">${X.story}</div>
+    ${yeon ? `<div class="msh">이것만 조심하세요</div><div class="story">${X.caution}</div>`
+      : `<div class="msh p">악연을 좋은 인연으로 바꾸는 법</div><div class="mtips">${tips.map((t, i) => `<div><b>${i + 1}</b>${t}</div>`).join('')}</div>`}
+    <div class="mshare"><button class="s1" data-act="mImg">↓ 결과 이미지 저장</button><button class="s2" data-act="mShare">친구에게 공유하기</button></div>
+    <div class="mshare" style="margin-top:8px"><button class="s1" data-act="mMode" data-mode="${yeon ? 'ak' : 'yeon'}" data-again="1">${yeon ? '같은 사람으로 악연 보기' : '같은 사람으로 인연 보기'}</button><button class="s1" data-act="mSaveB">상대 정보 저장하기</button></div>
+    <button class="btn g" data-act="mAgain" style="margin-top:10px;height:52px;font-size:16px">다른 사람과 다시 보기</button>
+    ${matchShop(mode)}
+    <p class="disc">${yeon ? '사주 원국과 띠·별자리를 바탕으로 재미로 보는 궁합이에요.<br>실제 관계는 두 사람의 마음과 노력이 가장 중요해요.' : '재미로 보는 콘텐츠예요. 악연 지수가 높아도 노력하면 얼마든지 좋은 인연이 될 수 있어요.'}</p>
+  </section>`;
+}
+function matchImage(){
+  const {RA, RB, M} = state.mR, mode = state.mMode || 'yeon', yeon = mode === 'yeon';
+  const X = matchTexts(M, RA, RB, mode);
+  const W = 1080, H = 1350, cv = document.createElement('canvas'); cv.width = W; cv.height = H; const x = cv.getContext('2d');
+  const g = x.createRadialGradient(W / 2, 0, 50, W / 2, 200, 1400);
+  if (yeon){ g.addColorStop(0, '#F48BA6'); g.addColorStop(.5, '#D9466B'); g.addColorStop(1, '#7C1B3A'); } else { g.addColorStop(0, '#6B4690'); g.addColorStop(.55, '#3A1F4D'); g.addColorStop(1, '#14091F'); }
+  x.fillStyle = g; x.fillRect(0, 0, W, H);
+  const F = (s, w) => (w || 800) + ' ' + s + 'px "Pretendard Variable", Pretendard, "Malgun Gothic", sans-serif';
+  const rr = (bx, by, bw, bh, r) => { x.beginPath(); x.moveTo(bx + r, by); x.arcTo(bx + bw, by, bx + bw, by + bh, r); x.arcTo(bx + bw, by + bh, bx, by + bh, r); x.arcTo(bx, by + bh, bx, by, r); x.arcTo(bx, by, bx + bw, by, r); x.closePath(); };
+  x.textAlign = 'center'; x.fillStyle = 'rgba(255,255,255,.85)'; x.font = F(34, 700); x.fillText(yeon ? '✦ 운명의 인연 ✦' : '✦ 운명의 악연 ✦', W / 2, 120);
+  const bdg = (R, cx) => { x.strokeStyle = 'rgba(255,255,255,.6)'; x.lineWidth = 4; x.fillStyle = 'rgba(255,255,255,.12)'; rr(cx - 120, 190, 240, 240, 40); x.fill(); x.stroke();
+    const d = R.P[1]; x.fillStyle = '#FFE3A8'; x.font = F(92, 800); x.fillText(STH[d.s] + BRH[d.b], cx, 335); x.fillStyle = 'rgba(255,255,255,.8)'; x.font = F(30, 600); x.fillText('日柱', cx, 390);
+    x.fillStyle = '#fff'; x.font = F(44, 800); x.fillText(R.inp.name || (R === RA ? '나' : '상대'), cx, 500); x.fillStyle = 'rgba(255,255,255,.8)'; x.font = F(30, 600); x.fillText(ANIMAL[R.P[3].b] + '띠 · ' + zName(astro(R).s), cx, 550); };
+  bdg(RA, 250); bdg(RB, W - 250);
+  x.strokeStyle = yeon ? '#FFE3A8' : '#D9C3F0'; x.lineWidth = 6; x.lineCap = 'round'; x.beginPath(); x.moveTo(380, 310); x.bezierCurveTo(450, 230, 500, 390, 540, 310); x.bezierCurveTo(580, 230, 630, 390, 700, 310); x.stroke();
+  if (yeon){ x.fillStyle = '#FFE3A8'; x.beginPath(); x.moveTo(540, 300); x.bezierCurveTo(520, 270, 485, 285, 500, 315); x.bezierCurveTo(510, 335, 540, 350, 540, 350); x.bezierCurveTo(540, 350, 570, 335, 580, 315); x.bezierCurveTo(595, 285, 560, 270, 540, 300); x.fill(); }
+  else { x.strokeStyle = '#FFB4C6'; x.lineWidth = 8; x.beginPath(); x.moveTo(515, 280); x.lineTo(565, 340); x.moveTo(565, 280); x.lineTo(515, 340); x.stroke(); }
+  x.fillStyle = 'rgba(255,255,255,.9)'; x.font = F(38, 800); x.fillText(yeon ? '인연 지수' : '악연 지수', W / 2, 700);
+  x.fillStyle = '#fff'; x.font = F(200, 800); x.fillText(String(X.score), W / 2 - 30, 900); x.font = F(64, 700); x.fillText('점', W / 2 + 150, 900);
+  x.font = F(62, 800); x.fillText(X.title, W / 2, 1010);
+  X.sub.forEach(([n, v], i) => { const col = i % 2, row = Math.floor(i / 2), bx = 150 + col * 420, by = 1090 + row * 80;
+    x.textAlign = 'left'; x.fillStyle = '#fff'; x.font = F(32, 700); x.fillText(n, bx, by); x.textAlign = 'right'; x.fillText(String(v), bx + 360, by);
+    x.fillStyle = 'rgba(255,255,255,.25)'; rr(bx, by + 16, 360, 12, 6); x.fill(); x.fillStyle = '#FFE3A8'; rr(bx, by + 16, Math.max(12, 360 * v / 100), 12, 6); x.fill(); });
+  x.textAlign = 'center'; x.fillStyle = 'rgba(255,255,255,.85)'; x.font = F(32, 700); x.fillText('운세명리 만세력 · manse.koreaunse.com', W / 2, 1300);
+  return cv.toDataURL('image/png');
+}
+function openMPick(who){
+  const list = loadSaved();
+  const cur = who === 'a' && state.input ? `<li data-act="mPickSel" data-who="a" data-i="cur"><div><div>${esc(state.input.name)} <span style="font-size:14px;color:var(--sub)">지금 보던 만세력</span></div><div class="meta">${state.input.cal === 'S' ? '양' : '음'} ${state.input.date} ${state.input.unknownTime ? '시간모름' : state.input.time}</div></div></li>` : '';
+  openModal(`<h3>${who === 'a' ? '내 만세력 불러오기' : '저장된 사람 불러오기'}<button class="x" data-act="close">×</button></h3>${cur || list.length ? `<ul class="city-list saved">${cur}${list.map((p, i) => `<li data-act="mPickSel" data-who="${who}" data-i="${i}"><div><div>${esc(p.name)} <span style="font-size:14px;color:var(--sub)">${p.gender === 'F' ? '여' : '남'}</span></div><div class="meta">${p.cal === 'S' ? '양' : '음'} ${p.date} ${p.unknownTime ? '시간모름' : p.time} · ${esc(p.city)}</div></div></li>`).join('')}</ul>` : '<p style="color:var(--sub)">저장된 만세력이 없어요.</p>'}`);
+}
+
 function renderResult(){
   const R = state.R;
   view.innerHTML = `
@@ -1907,7 +2212,7 @@ function openSaved(){
 }
 function openDrawer(){
   $('#layer').innerHTML = `<div class="dim" data-act="closeDim" style="justify-content:flex-end;padding:0"></div><nav class="drawer"><div class="brand" style="margin-bottom:18px"><img class="logo" src="${LOGO_MARK}" alt="">운세명리 <em>만세력</em></div>
-    <a data-act="nav" data-to="/">홈</a><a data-act="nav" data-to="/form">새 만세력 보기</a><a data-act="load">저장된 만세력</a><a data-act="nav" data-to="/charms">행운·건강 복줄 받기</a><a data-act="info" data-key="timetable">12간지 시간표</a><a data-act="info" data-key="privacy">개인정보처리방침</a>${SHOP.mode !== 'off' ? extLink(SHOP.home, SHOP.name + ' 바로가기 ↗') : ''}${state.R ? '<a data-act="nav" data-to="/result">마지막 결과 보기</a>' : ''}</nav>`;
+    <a data-act="nav" data-to="/">홈</a><a data-act="nav" data-to="/form">새 만세력 보기</a><a data-act="load">저장된 만세력</a><a data-act="nav" data-to="/charms">행운·건강 복줄 받기</a><a data-act="match" data-mode="yeon">인연·악연 궁합</a><a data-act="info" data-key="timetable">12간지 시간표</a><a data-act="info" data-key="privacy">개인정보처리방침</a>${SHOP.mode !== 'off' ? extLink(SHOP.home, SHOP.name + ' 바로가기 ↗') : ''}${state.R ? '<a data-act="nav" data-to="/result">마지막 결과 보기</a>' : ''}</nav>`;
 }
 
 /* ---------- 이벤트 ---------- */
@@ -1926,6 +2231,29 @@ document.addEventListener('click', e => {
     case 'room': closeModal(); go('/room/' + t.dataset.k); break;
     case 'gtab': { state.gTab = t.dataset.k; const w = $('#gulja-wrap'); w.innerHTML = guljaBody(state.R); const top = w.getBoundingClientRect().top + scrollY - 84; if (scrollY > top) window.scrollTo(0, top); } break;
     case 'cell': openCellSheet(t.dataset.t, +t.dataset.i); break;
+    case 'match': closeModal(); state.mMode = t.dataset.mode || 'yeon'; state.mA = state.input ? {...state.input} : (state.mA || blankP('F')); state.mB = null; state.mR = null; go('/match'); break;
+    case 'mMode': state.mMode = t.dataset.mode; if (t.dataset.again && state.mR){ renderMatchResult(); window.scrollTo(0, 0); } else renderMatchForm(); break;
+    case 'mPick': openMPick(t.dataset.who); break;
+    case 'mPickSel': { const p = t.dataset.i === 'cur' ? state.input : loadSaved()[+t.dataset.i]; if (p){ if (t.dataset.who === 'a') state.mA = {...p}; else state.mB = {...p}; } closeModal(); renderMatchForm(); } break;
+    case 'mSubmit': {
+      const pa = {...state.mA, unknownTime: !state.mA.time, city: state.mA.city || '서울특별시'}, pb = {...state.mB, unknownTime: !state.mB.time, city: state.mB.city || '서울특별시'};
+      const err = mValidate(pa, '나의') || mValidate(pb, '상대');
+      if (err){ $('#m-err').textContent = err; return; }
+      const RA = compute(pa), RB = compute(pb);
+      state.mR = {RA, RB, M: matchAnalyze(RA, RB)}; go('/match/result'); break;
+    }
+    case 'mAgain': state.mB = null; state.mR = null; go('/match'); break;
+    case 'mShare': {
+      const {RA, RB, M} = state.mR, md = state.mMode || 'yeon', X = matchTexts(M, RA, RB, md);
+      const txt = `${RA.inp.name || '나'} × ${RB.inp.name || '상대'} ${md === 'yeon' ? '인연' : '악연'} 지수 ${X.score}점, "${X.title}"! 운세명리 만세력에서 우리 사이도 확인해 보세요.`;
+      const url = 'https://manse.koreaunse.com/';
+      if (navigator.share) navigator.share({title: '운세명리 만세력 · 인연·악연 궁합', text: txt, url}).catch(() => {});
+      else if (navigator.clipboard) navigator.clipboard.writeText(txt + ' ' + url).then(() => toast('공유 문구를 복사했어요.'), () => toast('복사하지 못했어요.'));
+      break;
+    }
+    case 'mImg': { const src = matchImage(); const nm = `운세명리_${(state.mMode || 'yeon') === 'yeon' ? '인연' : '악연'}궁합.png`;
+      openModal(`<h3>결과 이미지<button class="x" data-act="close">×</button></h3><img class="ch-full" src="${src}" alt="궁합 결과"><p class="hint">휴대폰에서는 이미지를 <b>길게 눌러</b> 저장할 수도 있어요.</p><a class="btn y" style="display:flex;align-items:center;justify-content:center;text-decoration:none;margin-top:14px" href="${src}" download="${nm}">내려받기</a>`); break; }
+    case 'mSaveB': { const p = {...state.mR.RB.inp, name: state.mR.RB.inp.name || '상대'}; const list = loadSaved(); const idx = list.findIndex(q => q.name === p.name && q.date === p.date); if (idx >= 0) list[idx] = p; else list.unshift(p); localStorage.setItem('msr_profiles', JSON.stringify(list.slice(0, 50))); toast('상대 정보를 이 폰에 저장했어요.'); break; }
     case 'info': e.stopPropagation(); openInfo(t.dataset.key); break;
     case 'city': openCity(); break;
     case 'pickCity': state.draft.city = t.dataset.city; $('#f-city').value = t.dataset.city; closeModal(); $('#f-name').dispatchEvent(new Event('input')); break;
