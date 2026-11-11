@@ -725,10 +725,10 @@ const SHOP = {
   ]
 };
 const extLink = (url, inner, cls) => `<a class="${cls||''}" href="${url}" target="_blank" rel="noopener noreferrer">${inner}</a>`;
-function shopBlock(){
+function shopBlock(noConsult){
   if (SHOP.mode === 'off') return '';
   if (SHOP.mode === 'simple') return `<section class="shop pad">${extLink(SHOP.home, `<span>${SHOP.name} 바로가기</span><small>koreaunse.com ↗</small>`)}</section>`;
-  return `<section class="shop pad"><h3>더 깊은 풀이가 궁금하다면</h3><p class="shop-sub">${SHOP.name}에서 전문 사주 풀이를 받아보세요.</p>${SHOP.items.map(it => extLink(it.url, `<span>${it.title}</span><small>${it.tag} ↗</small>`)).join('')}${extLink(SHOP.home, `<span>${SHOP.name} 전체 상품 보기</span><small>koreaunse.com ↗</small>`, 'all')}${extLink(SHOP.consult, `<span>${SHOP.name} 전통사주 상담 바로가기</span><small>peakon.me ↗</small>`, 'all')}</section>`;
+  return `<section class="shop pad"><h3>더 깊은 풀이가 궁금하다면</h3><p class="shop-sub">${SHOP.name}에서 전문 사주 풀이를 받아보세요.</p>${SHOP.items.map(it => extLink(it.url, `<span>${it.title}</span><small>${it.tag} ↗</small>`)).join('')}${extLink(SHOP.home, `<span>${SHOP.name} 전체 상품 보기</span><small>koreaunse.com ↗</small>`, 'all')}${noConsult ? '' : extLink(SHOP.consult, `<span>${SHOP.name} 전통사주 상담 바로가기</span><small>peakon.me ↗</small>`, 'all')}</section>`;
 }
 document.getElementById('logoMark').src = LOGO_MARK;
 
@@ -1049,6 +1049,7 @@ function renderLanding(){
     </div>
   </section>
   <div class="preview"><div class="pv-t">미리보기</div>${profileBlock(sample, true)}${chartBlock(sample, true)}</div>
+  ${shopBlock(true)}
   <div class="sticky-cta"><button class="btn y" data-act="start">내 만세력 보기</button></div>`;
 }
 /* ---------- 행운·건강 복줄 (charms.json 목록을 읽어서 표시) ----------
